@@ -42,24 +42,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ScheduleGenerator.exe" size="34768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ScheduleGenerator.exe" size="83920">
       <assemblyIdentity name="ScheduleGenerator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>E7/gzu4qzUsiM4fui+sU1Yy9Wk1zEX9/zlVJba7oa6w=</dsig:DigestValue>
+        <dsig:DigestValue>G0bq3usSYoFPgE0lOR6rYh4kKXBSKBk5Gfi3nsbNdWQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ScheduleGenerator.exe.config" size="184">
+  <file name="ScheduleGenerator.exe.config" size="551">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FqWy0dfMmRS85zkU1NlW07p6LsNOPUHodvLiZcFdgJY=</dsig:DigestValue>
+      <dsig:DigestValue>AdOjlAU1klGt71M3l/8kTfFymell6q7s9OJ10UQtR+M=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

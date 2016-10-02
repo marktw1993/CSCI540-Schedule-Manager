@@ -5,75 +5,58 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace ScheduleGenerator
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Drawing;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows.Forms;
-    using System.Data.SqlClient;
-
-    public partial class LoginForm : Form
+    public partial class Form1 : Form
     {
-
-        public LoginForm()
+        SqlConnection con = new SqlConnection();
+        String serverInfo = "Data Source=MARK-PC/MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        public Form1()
         {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = serverInfo;
+
             InitializeComponent();
-           
-            //
-            /*
-           String url = "jdbc:mysql://localhost:3306/";
-           String dbName = "moviestore";
-           String driver = "com.mysql.jdbc.Driver";
-           String userName = "root"; 
-           String password = "#########"; 
-            */
+        }
 
-           try 
-           {
-               //
-               SqlConnection conn = new SqlConnection("server=localhost" +
-                                       "Trusted_Connection=yes;" +
-                                       "database=testDB; " +
-                                       "connection timeout=30");
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+           // TODO: This line of code loads data into the 'sTUDENTDataSet.login' table. You can move, or remove it, as needed.  
+            //this.loginTableAdapter.Fill(this.sTUDENTDataSet.login);  
+            //SqlConnection con = new SqlConnection(serverInfo);
+            //con.Open();
 
-               conn.Open();
-           } 
-           catch (Exception e) 
-           {
-                //e.printStackTrace();
-           }
-
+            {
+            }
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //Check username and password. If wrong reset and keep checking.
-            String Username = UsernameTextBox.ToString();
-            String Password = PasswordMaskedTextBox.ToString();
-
-            //Call sql getPassword(Username, Password)
-            //Check if password is correct
-            //If admin is true for user.      
-            if(true)
+            //SqlConnection con = new SqlConnection();
+           // con.ConnectionString = serverInfo;
+           // con.Open();
+            string userid = UsernameTextBox.Text;
+            string password = PasswordMaskedTextBox.Text;
+            SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                new AdministratorForm().Show();
-                this.Hide();
+                MessageBox.Show("Login successful");
             }
             else
             {
-                new UserForm().Show();
-                this.Hide();
+                MessageBox.Show("Invalid Login please check username and password");
             }
+           // con.Close();
         }
+
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -85,5 +68,14 @@ namespace ScheduleGenerator
             new UserForm().Show();
             this.Hide();
         }
+
+      /*  private void LoginForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'email.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter1.Fill(this.email.Employee);
+            // TODO: This line of code loads data into the 'pW.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.pW.Employee);
+
+        }*/
     }
 }

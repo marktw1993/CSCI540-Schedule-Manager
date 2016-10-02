@@ -87,11 +87,27 @@
     <Compile Include="AdministratorForm.Designer.cs">
       <DependentUpon>AdministratorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditUserForm.Designer.cs">
       <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Email.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Password.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Password.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PW.xsd</DependentUpon>
     </Compile>
     <Compile Include="TimeOffForm.cs">
       <SubType>Form</SubType>
@@ -111,7 +127,6 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
@@ -141,6 +156,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Email.xsc">
+      <DependentUpon>Email.xsd</DependentUpon>
+    </None>
+    <None Include="Email.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Email.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Email.xss">
+      <DependentUpon>Email.xsd</DependentUpon>
+    </None>
+    <None Include="Password.xsc">
+      <DependentUpon>Password.xsd</DependentUpon>
+    </None>
+    <None Include="Password.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Password.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Password.xss">
+      <DependentUpon>Password.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +187,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="PW.xsc">
+      <DependentUpon>PW.xsd</DependentUpon>
+    </None>
+    <None Include="PW.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PW.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PW.xss">
+      <DependentUpon>PW.xsd</DependentUpon>
+    </None>
     <None Include="ScheduleGenerator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
