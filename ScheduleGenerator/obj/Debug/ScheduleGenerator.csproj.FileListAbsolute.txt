@@ -65,3 +65,6 @@ C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\bin\
 C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.pdb
 C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe.manifest
 C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.application
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb

@@ -51,9 +51,9 @@
             this.label1.Location = new System.Drawing.Point(9, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "See code 1";
+            this.label1.Text = "First Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -62,39 +62,39 @@
             this.label2.Location = new System.Drawing.Point(9, 88);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "See code 2";
+            this.label2.Text = "Last Name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // SetFirstNameTextBox
             // 
-            this.SetFirstNameTextBox.Location = new System.Drawing.Point(83, 55);
-            this.SetFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SetFirstNameTextBox.Location = new System.Drawing.Point(99, 54);
+            this.SetFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SetFirstNameTextBox.Name = "SetFirstNameTextBox";
             this.SetFirstNameTextBox.Size = new System.Drawing.Size(76, 20);
             this.SetFirstNameTextBox.TabIndex = 2;
             // 
             // SetLastNameTextBox
             // 
-            this.SetLastNameTextBox.Location = new System.Drawing.Point(83, 85);
-            this.SetLastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SetLastNameTextBox.Location = new System.Drawing.Point(99, 84);
+            this.SetLastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SetLastNameTextBox.Name = "SetLastNameTextBox";
             this.SetLastNameTextBox.Size = new System.Drawing.Size(76, 20);
             this.SetLastNameTextBox.TabIndex = 3;
             // 
             // SetPasswordTextBox
             // 
-            this.SetPasswordTextBox.Location = new System.Drawing.Point(83, 113);
-            this.SetPasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SetPasswordTextBox.Location = new System.Drawing.Point(99, 112);
+            this.SetPasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SetPasswordTextBox.Name = "SetPasswordTextBox";
             this.SetPasswordTextBox.Size = new System.Drawing.Size(76, 20);
             this.SetPasswordTextBox.TabIndex = 4;
             // 
             // ChangeFirstNameButton
             // 
-            this.ChangeFirstNameButton.Location = new System.Drawing.Point(175, 55);
-            this.ChangeFirstNameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChangeFirstNameButton.Location = new System.Drawing.Point(191, 54);
+            this.ChangeFirstNameButton.Margin = new System.Windows.Forms.Padding(2);
             this.ChangeFirstNameButton.Name = "ChangeFirstNameButton";
             this.ChangeFirstNameButton.Size = new System.Drawing.Size(56, 19);
             this.ChangeFirstNameButton.TabIndex = 5;
@@ -104,8 +104,8 @@
             // 
             // ChangeLastNameButton
             // 
-            this.ChangeLastNameButton.Location = new System.Drawing.Point(175, 85);
-            this.ChangeLastNameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChangeLastNameButton.Location = new System.Drawing.Point(191, 84);
+            this.ChangeLastNameButton.Margin = new System.Windows.Forms.Padding(2);
             this.ChangeLastNameButton.Name = "ChangeLastNameButton";
             this.ChangeLastNameButton.Size = new System.Drawing.Size(56, 19);
             this.ChangeLastNameButton.TabIndex = 6;
@@ -115,8 +115,8 @@
             // 
             // SetPasswordButton
             // 
-            this.SetPasswordButton.Location = new System.Drawing.Point(175, 113);
-            this.SetPasswordButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SetPasswordButton.Location = new System.Drawing.Point(191, 112);
+            this.SetPasswordButton.Margin = new System.Windows.Forms.Padding(2);
             this.SetPasswordButton.Name = "SetPasswordButton";
             this.SetPasswordButton.Size = new System.Drawing.Size(56, 19);
             this.SetPasswordButton.TabIndex = 7;
@@ -130,16 +130,16 @@
             this.label3.Location = new System.Drawing.Point(9, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "See code 2";
+            this.label3.Text = "Email";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // EditUserBox
             // 
             this.EditUserBox.FormattingEnabled = true;
-            this.EditUserBox.Location = new System.Drawing.Point(83, 10);
-            this.EditUserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditUserBox.Location = new System.Drawing.Point(99, 9);
+            this.EditUserBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditUserBox.Name = "EditUserBox";
             this.EditUserBox.Size = new System.Drawing.Size(76, 21);
             this.EditUserBox.TabIndex = 9;
@@ -150,15 +150,15 @@
             this.label4.Location = new System.Drawing.Point(9, 12);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Select User";
+            this.label4.Text = "Select Employee";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SelectUserButton
             // 
-            this.SelectUserButton.Location = new System.Drawing.Point(175, 10);
-            this.SelectUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SelectUserButton.Location = new System.Drawing.Point(191, 9);
+            this.SelectUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectUserButton.Name = "SelectUserButton";
             this.SelectUserButton.Size = new System.Drawing.Size(56, 19);
             this.SelectUserButton.TabIndex = 11;
@@ -171,13 +171,13 @@
             this.label5.Location = new System.Drawing.Point(9, 145);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 14;
-            this.label5.Text = "See code 2";
+            this.label5.Text = "Password";
             // 
             // SetEmailButton
             // 
-            this.SetEmailButton.Location = new System.Drawing.Point(175, 143);
+            this.SetEmailButton.Location = new System.Drawing.Point(191, 142);
             this.SetEmailButton.Margin = new System.Windows.Forms.Padding(2);
             this.SetEmailButton.Name = "SetEmailButton";
             this.SetEmailButton.Size = new System.Drawing.Size(56, 19);
@@ -188,7 +188,7 @@
             // 
             // SetEmailTextBox
             // 
-            this.SetEmailTextBox.Location = new System.Drawing.Point(83, 143);
+            this.SetEmailTextBox.Location = new System.Drawing.Point(99, 142);
             this.SetEmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SetEmailTextBox.Name = "SetEmailTextBox";
             this.SetEmailTextBox.Size = new System.Drawing.Size(76, 20);
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 192);
+            this.ClientSize = new System.Drawing.Size(292, 192);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SetEmailButton);
             this.Controls.Add(this.SetEmailTextBox);
@@ -214,7 +214,7 @@
             this.Controls.Add(this.SetFirstNameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditUserForm";
             this.Text = "This will be the admin\'s name";
             this.ResumeLayout(false);
