@@ -25,7 +25,7 @@ namespace ScheduleGenerator
             String EmployeeID = AddIDTextBox.ToString();
             String Email = AddLastNameTextBox.ToString();
 
-            int Password = 1;
+            //int Password = 1;
 
             //GeneratedPasswordTextBox.Text().Equals("1");
             //Call sql procedure addUser(FirstName,LastName,EmployeeID,Email, Password);

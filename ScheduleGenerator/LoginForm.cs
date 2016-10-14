@@ -15,12 +15,9 @@ namespace ScheduleGenerator
     public partial class Form1 : Form
     {
         SqlConnection con = new SqlConnection();
-        String serverInfo = "Data Source=MARK-PC/MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=Mark-pc/mwsqlserver;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         public Form1()
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = serverInfo;
-
             InitializeComponent();
         }
 
@@ -28,18 +25,18 @@ namespace ScheduleGenerator
         {
            // TODO: This line of code loads data into the 'sTUDENTDataSet.login' table. You can move, or remove it, as needed.  
             //this.loginTableAdapter.Fill(this.sTUDENTDataSet.login);  
-            //SqlConnection con = new SqlConnection(serverInfo);
+            SqlConnection con = new SqlConnection(serverInfo);
             //con.Open();
+            //con.Close();
 
             {
             }
         }
-
+        
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            //SqlConnection con = new SqlConnection();
-           // con.ConnectionString = serverInfo;
-           // con.Open();
+            SqlConnection con = new SqlConnection(serverInfo);
+            con.Open();
             string userid = UsernameTextBox.Text;
             string password = PasswordMaskedTextBox.Text;
             SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
@@ -54,7 +51,7 @@ namespace ScheduleGenerator
             {
                 MessageBox.Show("Invalid Login please check username and password");
             }
-           // con.Close();
+            con.Close();
         }
 
 
