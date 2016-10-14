@@ -15,43 +15,46 @@ namespace ScheduleGenerator
     public partial class Form1 : Form
     {
         SqlConnection con = new SqlConnection();
-        String serverInfo = "Data Source=Mark-pc/mwsqlserver;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-           // TODO: This line of code loads data into the 'sTUDENTDataSet.login' table. You can move, or remove it, as needed.  
-            //this.loginTableAdapter.Fill(this.sTUDENTDataSet.login);  
-            SqlConnection con = new SqlConnection(serverInfo);
-            //con.Open();
-            //con.Close();
-
+            try
             {
+                
+            }
+            catch (Exception e)
+            {
+                
             }
         }
         
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(serverInfo);
-            con.Open();
-            string userid = UsernameTextBox.Text;
-            string password = PasswordMaskedTextBox.Text;
-            SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            try
             {
-                MessageBox.Show("Login successful");
+                SqlConnection con = new SqlConnection(serverInfo);
+                con.Open();
+                string userid = UsernameTextBox.Text;
+                string password = PasswordMaskedTextBox.Text;
+                SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Login successful");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Login please check username and password");
+                }
+                con.Close();
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Invalid Login please check username and password");
+                MessageBox.Show(ex.ToString());
             }
-            con.Close();
         }
 
 
@@ -66,13 +69,13 @@ namespace ScheduleGenerator
             this.Hide();
         }
 
-      /*  private void LoginForm_Load(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'email.Employee' table. You can move, or remove it, as needed.
             this.employeeTableAdapter1.Fill(this.email.Employee);
             // TODO: This line of code loads data into the 'pW.Employee' table. You can move, or remove it, as needed.
             this.employeeTableAdapter.Fill(this.pW.Employee);
 
-        }*/
+        }
     }
 }
