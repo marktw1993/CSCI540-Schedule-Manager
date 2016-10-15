@@ -7,6 +7,7 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -28,17 +29,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.CheckBox adminCB;
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.AddUserButton = new System.Windows.Forms.Button();
             this.AddFirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.firstName = new ScheduleGenerator.FirstName();
             this.AddLastNameTextBox = new System.Windows.Forms.TextBox();
+            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lastName = new ScheduleGenerator.LastName();
             this.label3 = new System.Windows.Forms.Label();
-            this.GeneratedPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.AddIDTextBox = new System.Windows.Forms.TextBox();
+            this.AddPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.employeeBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.password = new ScheduleGenerator.Password();
             this.AddEmailTextBox = new System.Windows.Forms.TextBox();
+            this.employeeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.email = new ScheduleGenerator.Email();
             this.label5 = new System.Windows.Forms.Label();
+            this.employeeTableAdapter = new ScheduleGenerator.FirstNameTableAdapters.EmployeeTableAdapter();
+            this.employeeTableAdapter1 = new ScheduleGenerator.LastNameTableAdapters.EmployeeTableAdapter();
+            this.employeeTableAdapter2 = new ScheduleGenerator.EmailTableAdapters.EmployeeTableAdapter();
+            this.employeeTableAdapter3 = new ScheduleGenerator.PasswordTableAdapters.EmployeeTableAdapter();
+            this.employeeBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.admin = new ScheduleGenerator.admin();
+            this.employeeTableAdapter4 = new ScheduleGenerator.adminTableAdapters.EmployeeTableAdapter();
+            adminCB = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.password)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.email)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.admin)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,8 +90,8 @@
             // 
             // AddUserButton
             // 
-            this.AddUserButton.Location = new System.Drawing.Point(259, 73);
-            this.AddUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddUserButton.Location = new System.Drawing.Point(276, 78);
+            this.AddUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddUserButton.Name = "AddUserButton";
             this.AddUserButton.Size = new System.Drawing.Size(98, 25);
             this.AddUserButton.TabIndex = 2;
@@ -74,93 +101,171 @@
             // 
             // AddFirstNameTextBox
             // 
+            this.AddFirstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "First name", true));
             this.AddFirstNameTextBox.Location = new System.Drawing.Point(78, 10);
-            this.AddFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddFirstNameTextBox.Name = "AddFirstNameTextBox";
             this.AddFirstNameTextBox.Size = new System.Drawing.Size(116, 20);
             this.AddFirstNameTextBox.TabIndex = 3;
             // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.firstName;
+            // 
+            // firstName
+            // 
+            this.firstName.DataSetName = "FirstName";
+            this.firstName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // AddLastNameTextBox
             // 
+            this.AddLastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource1, "Last name", true));
             this.AddLastNameTextBox.Location = new System.Drawing.Point(78, 35);
-            this.AddLastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddLastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddLastNameTextBox.Name = "AddLastNameTextBox";
             this.AddLastNameTextBox.Size = new System.Drawing.Size(116, 20);
             this.AddLastNameTextBox.TabIndex = 4;
             // 
+            // employeeBindingSource1
+            // 
+            this.employeeBindingSource1.DataMember = "Employee";
+            this.employeeBindingSource1.DataSource = this.lastName;
+            // 
+            // lastName
+            // 
+            this.lastName.DataSetName = "LastName";
+            this.lastName.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(206, 12);
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(241, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Generated Password";
+            this.label3.Text = "Password";
             // 
-            // GeneratedPasswordTextBox
+            // AddPasswordTextBox
             // 
-            this.GeneratedPasswordTextBox.Location = new System.Drawing.Point(316, 10);
-            this.GeneratedPasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.GeneratedPasswordTextBox.Name = "GeneratedPasswordTextBox";
-            this.GeneratedPasswordTextBox.Size = new System.Drawing.Size(76, 20);
-            this.GeneratedPasswordTextBox.TabIndex = 6;
+            this.AddPasswordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource3, "Password", true));
+            this.AddPasswordTextBox.Location = new System.Drawing.Point(298, 11);
+            this.AddPasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AddPasswordTextBox.Name = "AddPasswordTextBox";
+            this.AddPasswordTextBox.Size = new System.Drawing.Size(76, 20);
+            this.AddPasswordTextBox.TabIndex = 6;
             // 
-            // label4
+            // employeeBindingSource3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 60);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Employee Id";
+            this.employeeBindingSource3.DataMember = "Employee";
+            this.employeeBindingSource3.DataSource = this.password;
             // 
-            // AddIDTextBox
+            // password
             // 
-            this.AddIDTextBox.Location = new System.Drawing.Point(78, 58);
-            this.AddIDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.AddIDTextBox.Name = "AddIDTextBox";
-            this.AddIDTextBox.Size = new System.Drawing.Size(116, 20);
-            this.AddIDTextBox.TabIndex = 8;
+            this.password.DataSetName = "Password";
+            this.password.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // AddEmailTextBox
             // 
-            this.AddEmailTextBox.Location = new System.Drawing.Point(78, 80);
-            this.AddEmailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddEmailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource2, "Email", true));
+            this.AddEmailTextBox.Location = new System.Drawing.Point(78, 59);
+            this.AddEmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddEmailTextBox.Name = "AddEmailTextBox";
             this.AddEmailTextBox.Size = new System.Drawing.Size(116, 20);
             this.AddEmailTextBox.TabIndex = 10;
             // 
+            // employeeBindingSource2
+            // 
+            this.employeeBindingSource2.DataMember = "Employee";
+            this.employeeBindingSource2.DataSource = this.email;
+            // 
+            // email
+            // 
+            this.email.DataSetName = "Email";
+            this.email.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 83);
+            this.label5.Location = new System.Drawing.Point(10, 62);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Email";
             // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeeTableAdapter1
+            // 
+            this.employeeTableAdapter1.ClearBeforeFill = true;
+            // 
+            // employeeTableAdapter2
+            // 
+            this.employeeTableAdapter2.ClearBeforeFill = true;
+            // 
+            // employeeTableAdapter3
+            // 
+            this.employeeTableAdapter3.ClearBeforeFill = true;
+            // 
+            // adminCB
+            // 
+            adminCB.AutoSize = true;
+            adminCB.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.employeeBindingSource4, "Admin", true));
+            adminCB.Location = new System.Drawing.Point(276, 47);
+            adminCB.Name = "adminCB";
+            adminCB.Size = new System.Drawing.Size(55, 17);
+            adminCB.TabIndex = 11;
+            adminCB.Text = "Admin";
+            adminCB.UseVisualStyleBackColor = true;
+            // 
+            // employeeBindingSource4
+            // 
+            this.employeeBindingSource4.DataMember = "Employee";
+            this.employeeBindingSource4.DataSource = this.admin;
+            // 
+            // admin
+            // 
+            this.admin.DataSetName = "admin";
+            this.admin.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeTableAdapter4
+            // 
+            this.employeeTableAdapter4.ClearBeforeFill = true;
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 114);
+            this.Controls.Add(adminCB);
             this.Controls.Add(this.AddEmailTextBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.AddIDTextBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.GeneratedPasswordTextBox);
+            this.Controls.Add(this.AddPasswordTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AddLastNameTextBox);
             this.Controls.Add(this.AddFirstNameTextBox);
             this.Controls.Add(this.AddUserButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddUserForm";
             this.Text = "AddUserForm";
+            this.Load += new System.EventHandler(this.AddUserForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firstName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.password)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.email)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.admin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,10 +279,23 @@
         private System.Windows.Forms.TextBox AddFirstNameTextBox;
         private System.Windows.Forms.TextBox AddLastNameTextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox GeneratedPasswordTextBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox AddIDTextBox;
+        private System.Windows.Forms.TextBox AddPasswordTextBox;
         private System.Windows.Forms.TextBox AddEmailTextBox;
         private System.Windows.Forms.Label label5;
+        private FirstName firstName;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private FirstNameTableAdapters.EmployeeTableAdapter employeeTableAdapter;
+        private LastName lastName;
+        private System.Windows.Forms.BindingSource employeeBindingSource1;
+        private LastNameTableAdapters.EmployeeTableAdapter employeeTableAdapter1;
+        private Email email;
+        private System.Windows.Forms.BindingSource employeeBindingSource2;
+        private EmailTableAdapters.EmployeeTableAdapter employeeTableAdapter2;
+        private Password password;
+        private System.Windows.Forms.BindingSource employeeBindingSource3;
+        private PasswordTableAdapters.EmployeeTableAdapter employeeTableAdapter3;
+        private admin admin;
+        private System.Windows.Forms.BindingSource employeeBindingSource4;
+        private adminTableAdapters.EmployeeTableAdapter employeeTableAdapter4;
     }
 }

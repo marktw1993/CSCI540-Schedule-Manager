@@ -36,9 +36,22 @@ namespace ScheduleGenerator
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Login successful");
-                    new UserForm().Show();
-                    this.Hide();
+                    SqlCommand adminCheck = new SqlCommand("select * from Employee where Email='" + userid + "'and Admin='True'", con);
+                    SqlDataAdapter adminDA = new SqlDataAdapter(adminCheck);
+                    DataTable adminDT = new DataTable();
+                    adminDA.Fill(adminDT);
+                    if(adminDT.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Login successful");
+                        new AdministratorForm().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login successful");
+                        new UserForm().Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
