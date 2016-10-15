@@ -60,3 +60,4 @@ C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\
 C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
 C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache
 C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config

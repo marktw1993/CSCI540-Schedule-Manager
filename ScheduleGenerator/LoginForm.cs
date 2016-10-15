@@ -19,14 +19,7 @@ namespace ScheduleGenerator
         public Form1()
         {
             InitializeComponent();
-            try
-            {
-                
-            }
-            catch (Exception e)
-            {
-                
-            }
+
         }
         
         private void LoginButton_Click(object sender, EventArgs e)
@@ -73,9 +66,6 @@ namespace ScheduleGenerator
         {
             // TODO: This line of code loads data into the 'email.Employee' table. You can move, or remove it, as needed.
             this.employeeTableAdapter1.Fill(this.email.Employee);
-            // TODO: This line of code loads data into the 'pW.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter.Fill(this.pW.Employee);
-
         }
     }
 }
