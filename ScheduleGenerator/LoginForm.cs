@@ -37,6 +37,8 @@ namespace ScheduleGenerator
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("Login successful");
+                    new UserForm().Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -54,12 +56,6 @@ namespace ScheduleGenerator
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new UserForm().Show();
-            this.Hide();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
