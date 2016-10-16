@@ -29,9 +29,12 @@ namespace ScheduleGenerator
             
 
             SqlConnection con = new SqlConnection(serverInfo);
+            SqlCommand cmd = new SqlCommand("Insert into Employee(First name, Last name, Email, Password, Admin) values('" + FirstName + "', '" + LastName + "', '" + Email + "', '" + Password + "','True');", con);
+      //      DataTable dt = new DataTable();
             con.Open();
-            SqlCommand cmd = new SqlCommand("Insert into Employee(First name, Last name, Email, Password, Admin) values('" +FirstName+ "', '" +LastName+"', '"+Email+"', '"+Password+"','True');", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
+       //     da.Fill(dt);
+       //     da.Update(dt);
             con.Close();
             MessageBox.Show("User was added!");
             this.Hide();

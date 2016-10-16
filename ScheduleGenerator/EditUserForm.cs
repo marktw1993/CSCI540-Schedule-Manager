@@ -52,5 +52,12 @@ namespace ScheduleGenerator
         {
             //Update the users email
         }
+
+        private void EditUserForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'schedulingDatabaseDataSet1.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter.Fill(this.schedulingDatabaseDataSet1.Employee);
+
+        }
     }
 }

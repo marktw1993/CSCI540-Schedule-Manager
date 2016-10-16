@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SetFirstNameTextBox = new System.Windows.Forms.TextBox();
@@ -43,6 +44,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.SetEmailButton = new System.Windows.Forms.Button();
             this.SetEmailTextBox = new System.Windows.Forms.TextBox();
+            this.schedulingDatabaseDataSet1 = new ScheduleGenerator.SchedulingDatabaseDataSet1();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeTableAdapter = new ScheduleGenerator.SchedulingDatabaseDataSet1TableAdapters.EmployeeTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulingDatabaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -137,6 +143,7 @@
             // 
             // EditUserBox
             // 
+            this.EditUserBox.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.employeeBindingSource, "EmployeeID", true));
             this.EditUserBox.FormattingEnabled = true;
             this.EditUserBox.Location = new System.Drawing.Point(99, 9);
             this.EditUserBox.Margin = new System.Windows.Forms.Padding(2);
@@ -157,6 +164,7 @@
             // 
             // SelectUserButton
             // 
+            this.SelectUserButton.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.employeeBindingSource, "EmployeeID", true));
             this.SelectUserButton.Location = new System.Drawing.Point(191, 9);
             this.SelectUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectUserButton.Name = "SelectUserButton";
@@ -194,6 +202,20 @@
             this.SetEmailTextBox.Size = new System.Drawing.Size(76, 20);
             this.SetEmailTextBox.TabIndex = 12;
             // 
+            // schedulingDatabaseDataSet1
+            // 
+            this.schedulingDatabaseDataSet1.DataSetName = "SchedulingDatabaseDataSet1";
+            this.schedulingDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.schedulingDatabaseDataSet1;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
             // EditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +239,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditUserForm";
             this.Text = "This will be the admin\'s name";
+            this.Load += new System.EventHandler(this.EditUserForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.schedulingDatabaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +264,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button SetEmailButton;
         private System.Windows.Forms.TextBox SetEmailTextBox;
+        private SchedulingDatabaseDataSet1 schedulingDatabaseDataSet1;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private SchedulingDatabaseDataSet1TableAdapters.EmployeeTableAdapter employeeTableAdapter;
     }
 }

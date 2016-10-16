@@ -129,6 +129,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SchedulingDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SchedulingDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchedulingDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TimeOffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +267,17 @@
     </None>
     <None Include="SchedulingDatabaseDataSet.xss">
       <DependentUpon>SchedulingDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchedulingDatabaseDataSet1.xsc">
+      <DependentUpon>SchedulingDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SchedulingDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchedulingDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchedulingDatabaseDataSet1.xss">
+      <DependentUpon>SchedulingDatabaseDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
