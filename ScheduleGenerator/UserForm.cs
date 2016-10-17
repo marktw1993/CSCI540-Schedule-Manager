@@ -31,5 +31,10 @@ namespace ScheduleGenerator
         {
             new TimeOffForm().Show();
         }
+
+        private void AvailabilityTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

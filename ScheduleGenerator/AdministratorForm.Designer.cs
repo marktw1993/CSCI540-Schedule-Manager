@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.AdminTabControl = new System.Windows.Forms.TabControl();
+            this.ToUserForm = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.GenerateScheduleTab.SuspendLayout();
             this.GenerateTable.SuspendLayout();
@@ -107,12 +108,13 @@
             // 
             // GenerateScheduleTab
             // 
+            this.GenerateScheduleTab.Controls.Add(this.ToUserForm);
             this.GenerateScheduleTab.Controls.Add(this.GenerateButton);
             this.GenerateScheduleTab.Controls.Add(this.GenerateTable);
             this.GenerateScheduleTab.Location = new System.Drawing.Point(4, 23);
-            this.GenerateScheduleTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateScheduleTab.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateScheduleTab.Name = "GenerateScheduleTab";
-            this.GenerateScheduleTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateScheduleTab.Padding = new System.Windows.Forms.Padding(2);
             this.GenerateScheduleTab.Size = new System.Drawing.Size(560, 387);
             this.GenerateScheduleTab.TabIndex = 1;
             this.GenerateScheduleTab.Text = "Generate Schedule";
@@ -121,7 +123,7 @@
             // GenerateButton
             // 
             this.GenerateButton.Location = new System.Drawing.Point(222, 247);
-            this.GenerateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateButton.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(88, 19);
             this.GenerateButton.TabIndex = 2;
@@ -149,7 +151,7 @@
             this.GenerateTable.Controls.Add(this.label4, 3, 0);
             this.GenerateTable.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.GenerateTable.Location = new System.Drawing.Point(2, 5);
-            this.GenerateTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateTable.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateTable.Name = "GenerateTable";
             this.GenerateTable.RowCount = 2;
             this.GenerateTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.21053F));
@@ -232,11 +234,22 @@
             this.AdminTabControl.Controls.Add(this.GenerateScheduleTab);
             this.AdminTabControl.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.AdminTabControl.Location = new System.Drawing.Point(9, 25);
-            this.AdminTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdminTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.AdminTabControl.Name = "AdminTabControl";
             this.AdminTabControl.SelectedIndex = 0;
             this.AdminTabControl.Size = new System.Drawing.Size(568, 414);
             this.AdminTabControl.TabIndex = 2;
+            // 
+            // ToUserForm
+            // 
+            this.ToUserForm.Location = new System.Drawing.Point(442, 354);
+            this.ToUserForm.Margin = new System.Windows.Forms.Padding(2);
+            this.ToUserForm.Name = "ToUserForm";
+            this.ToUserForm.Size = new System.Drawing.Size(118, 31);
+            this.ToUserForm.TabIndex = 3;
+            this.ToUserForm.Text = "Go to Employee View";
+            this.ToUserForm.UseVisualStyleBackColor = true;
+            this.ToUserForm.Click += new System.EventHandler(this.button1_Click);
             // 
             // AdministratorForm
             // 
@@ -247,7 +260,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdministratorForm";
             this.Text = "Administrator Name";
             this.menuStrip2.ResumeLayout(false);
@@ -280,5 +293,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl AdminTabControl;
+        private System.Windows.Forms.Button ToUserForm;
     }
 }

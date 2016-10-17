@@ -36,5 +36,11 @@ namespace ScheduleGenerator
         {
             new EditUserForm().Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new UserForm().Show();
+            this.Hide();
+        }
     }
 }
