@@ -50,30 +50,28 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(28, 27);
-            this.UsernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.UsernameLabel.Location = new System.Drawing.Point(37, 33);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(55, 13);
+            this.UsernameLabel.Size = new System.Drawing.Size(73, 17);
             this.UsernameLabel.TabIndex = 0;
             this.UsernameLabel.Text = "Username";
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(31, 55);
-            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PasswordLabel.Location = new System.Drawing.Point(41, 68);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
+            this.PasswordLabel.Size = new System.Drawing.Size(69, 17);
             this.PasswordLabel.TabIndex = 1;
             this.PasswordLabel.Text = "Password";
             // 
             // UsernameTextBox
             // 
             this.UsernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource1, "Email", true));
-            this.UsernameTextBox.Location = new System.Drawing.Point(87, 24);
-            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.UsernameTextBox.Location = new System.Drawing.Point(116, 30);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(86, 20);
+            this.UsernameTextBox.Size = new System.Drawing.Size(113, 22);
             this.UsernameTextBox.TabIndex = 2;
             // 
             // employeeBindingSource1
@@ -89,10 +87,11 @@
             // PasswordMaskedTextBox
             // 
             this.PasswordMaskedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeeBindingSource, "Password", true));
-            this.PasswordMaskedTextBox.Location = new System.Drawing.Point(87, 55);
-            this.PasswordMaskedTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordMaskedTextBox.Location = new System.Drawing.Point(116, 68);
+            this.PasswordMaskedTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordMaskedTextBox.Name = "PasswordMaskedTextBox";
-            this.PasswordMaskedTextBox.Size = new System.Drawing.Size(86, 20);
+            this.PasswordMaskedTextBox.PasswordChar = '*';
+            this.PasswordMaskedTextBox.Size = new System.Drawing.Size(113, 22);
             this.PasswordMaskedTextBox.TabIndex = 3;
             // 
             // employeeBindingSource
@@ -107,10 +106,10 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(36, 89);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(2);
+            this.LoginButton.Location = new System.Drawing.Point(48, 110);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(56, 26);
+            this.LoginButton.Size = new System.Drawing.Size(75, 32);
             this.LoginButton.TabIndex = 4;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -118,10 +117,10 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(116, 89);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitButton.Location = new System.Drawing.Point(155, 110);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(56, 26);
+            this.ExitButton.Size = new System.Drawing.Size(75, 32);
             this.ExitButton.TabIndex = 5;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -137,16 +136,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 124);
+            this.ClientSize = new System.Drawing.Size(283, 153);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordMaskedTextBox);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Product Name";
             this.Load += new System.EventHandler(this.LoginForm_Load);

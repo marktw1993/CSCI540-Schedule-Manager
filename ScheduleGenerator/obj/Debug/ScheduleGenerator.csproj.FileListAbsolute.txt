@@ -68,3 +68,15 @@ C:\Users\Mark\Desktop\New folder\CSCI540-Schedule-Manager\ScheduleGenerator\obj\
 D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
 D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
 D:\school git project\CSCI540-Schedule-Manager\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\bin\Debug\ScheduleGenerator.exe.config
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.exe
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.pdb
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.AddUserForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.AdministratorForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.EditUserForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.TimeOffForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.UserForm.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.Form1.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.Properties.Resources.resources
+C:\Users\Mason Hardy\Desktop\ScheduleGenerator\obj\Debug\ScheduleGenerator.csproj.GenerateResource.Cache

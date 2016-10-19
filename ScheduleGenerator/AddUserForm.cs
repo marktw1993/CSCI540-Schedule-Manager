@@ -8,12 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace ScheduleGenerator
 {
     public partial class AddUserForm : Form
     {
+        SqlConnection con = new SqlConnection();
         String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+
         public AddUserForm()
         {
             InitializeComponent();
@@ -26,11 +32,23 @@ namespace ScheduleGenerator
             String LastName = AddLastNameTextBox.ToString();
             String Email = AddEmailTextBox.ToString();
             String Password = AddPasswordTextBox.ToString();
-            
+            String ID = addUserIDTextBox.ToString();
 
             SqlConnection con = new SqlConnection(serverInfo);
-            SqlCommand cmd = new SqlCommand("Insert into Employee(First name, Last name, Email, Password, Admin) values('" + FirstName + "', '" + LastName + "', '" + Email + "', '" + Password + "','True');", con);
-      //      DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("addEmployee", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add( new SqlParameter("@pID", ID));
+            cmd.Parameters.Add(new SqlParameter("@pFirstName", FirstName));
+            cmd.Parameters.Add(new SqlParameter("@pLastName", LastName));
+            cmd.Parameters.Add(new SqlParameter("@pEmail", Email));
+            cmd.Parameters.Add(new SqlParameter("@pPassword", Password));
+            //Flat 0 value for the admin bit.
+            cmd.Parameters.Add(new SqlParameter("@pAdmin", 0));
+
+
+
+
+            //      DataTable dt = new DataTable();
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
        //     da.Fill(dt);

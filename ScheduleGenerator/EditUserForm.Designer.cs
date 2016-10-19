@@ -39,70 +39,66 @@
             this.SetPasswordButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.EditUserBox = new System.Windows.Forms.ComboBox();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.schedulingDatabaseDataSet1 = new ScheduleGenerator.SchedulingDatabaseDataSet1();
             this.label4 = new System.Windows.Forms.Label();
             this.SelectUserButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.SetEmailButton = new System.Windows.Forms.Button();
             this.SetEmailTextBox = new System.Windows.Forms.TextBox();
-            this.schedulingDatabaseDataSet1 = new ScheduleGenerator.SchedulingDatabaseDataSet1();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new ScheduleGenerator.SchedulingDatabaseDataSet1TableAdapters.EmployeeTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulingDatabaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulingDatabaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Last Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // SetFirstNameTextBox
             // 
-            this.SetFirstNameTextBox.Location = new System.Drawing.Point(99, 54);
-            this.SetFirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SetFirstNameTextBox.Location = new System.Drawing.Point(132, 66);
+            this.SetFirstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SetFirstNameTextBox.Name = "SetFirstNameTextBox";
-            this.SetFirstNameTextBox.Size = new System.Drawing.Size(76, 20);
+            this.SetFirstNameTextBox.Size = new System.Drawing.Size(100, 22);
             this.SetFirstNameTextBox.TabIndex = 2;
             // 
             // SetLastNameTextBox
             // 
-            this.SetLastNameTextBox.Location = new System.Drawing.Point(99, 84);
-            this.SetLastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SetLastNameTextBox.Location = new System.Drawing.Point(132, 103);
+            this.SetLastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SetLastNameTextBox.Name = "SetLastNameTextBox";
-            this.SetLastNameTextBox.Size = new System.Drawing.Size(76, 20);
+            this.SetLastNameTextBox.Size = new System.Drawing.Size(100, 22);
             this.SetLastNameTextBox.TabIndex = 3;
             // 
             // SetPasswordTextBox
             // 
-            this.SetPasswordTextBox.Location = new System.Drawing.Point(99, 112);
-            this.SetPasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SetPasswordTextBox.Location = new System.Drawing.Point(132, 138);
+            this.SetPasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SetPasswordTextBox.Name = "SetPasswordTextBox";
-            this.SetPasswordTextBox.Size = new System.Drawing.Size(76, 20);
+            this.SetPasswordTextBox.Size = new System.Drawing.Size(100, 22);
             this.SetPasswordTextBox.TabIndex = 4;
             // 
             // ChangeFirstNameButton
             // 
-            this.ChangeFirstNameButton.Location = new System.Drawing.Point(191, 54);
-            this.ChangeFirstNameButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ChangeFirstNameButton.Location = new System.Drawing.Point(255, 66);
+            this.ChangeFirstNameButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangeFirstNameButton.Name = "ChangeFirstNameButton";
-            this.ChangeFirstNameButton.Size = new System.Drawing.Size(56, 19);
+            this.ChangeFirstNameButton.Size = new System.Drawing.Size(75, 23);
             this.ChangeFirstNameButton.TabIndex = 5;
             this.ChangeFirstNameButton.Text = "Change";
             this.ChangeFirstNameButton.UseVisualStyleBackColor = true;
@@ -110,10 +106,10 @@
             // 
             // ChangeLastNameButton
             // 
-            this.ChangeLastNameButton.Location = new System.Drawing.Point(191, 84);
-            this.ChangeLastNameButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ChangeLastNameButton.Location = new System.Drawing.Point(255, 103);
+            this.ChangeLastNameButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChangeLastNameButton.Name = "ChangeLastNameButton";
-            this.ChangeLastNameButton.Size = new System.Drawing.Size(56, 19);
+            this.ChangeLastNameButton.Size = new System.Drawing.Size(75, 23);
             this.ChangeLastNameButton.TabIndex = 6;
             this.ChangeLastNameButton.Text = "Change";
             this.ChangeLastNameButton.UseVisualStyleBackColor = true;
@@ -121,10 +117,10 @@
             // 
             // SetPasswordButton
             // 
-            this.SetPasswordButton.Location = new System.Drawing.Point(191, 112);
-            this.SetPasswordButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SetPasswordButton.Location = new System.Drawing.Point(255, 138);
+            this.SetPasswordButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SetPasswordButton.Name = "SetPasswordButton";
-            this.SetPasswordButton.Size = new System.Drawing.Size(56, 19);
+            this.SetPasswordButton.Size = new System.Drawing.Size(75, 23);
             this.SetPasswordButton.TabIndex = 7;
             this.SetPasswordButton.Text = "Change";
             this.SetPasswordButton.UseVisualStyleBackColor = true;
@@ -133,31 +129,38 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 115);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(12, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Email";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // EditUserBox
             // 
             this.EditUserBox.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.employeeBindingSource, "EmployeeID", true));
             this.EditUserBox.FormattingEnabled = true;
-            this.EditUserBox.Location = new System.Drawing.Point(99, 9);
-            this.EditUserBox.Margin = new System.Windows.Forms.Padding(2);
+            this.EditUserBox.Location = new System.Drawing.Point(132, 11);
+            this.EditUserBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditUserBox.Name = "EditUserBox";
-            this.EditUserBox.Size = new System.Drawing.Size(76, 21);
+            this.EditUserBox.Size = new System.Drawing.Size(100, 24);
             this.EditUserBox.TabIndex = 9;
+            // 
+            // employeeBindingSource
+            // 
+            this.employeeBindingSource.DataMember = "Employee";
+            this.employeeBindingSource.DataSource = this.schedulingDatabaseDataSet1;
+            // 
+            // schedulingDatabaseDataSet1
+            // 
+            this.schedulingDatabaseDataSet1.DataSetName = "SchedulingDatabaseDataSet1";
+            this.schedulingDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 12);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(12, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.Size = new System.Drawing.Size(113, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Select Employee";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,30 +168,30 @@
             // SelectUserButton
             // 
             this.SelectUserButton.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.employeeBindingSource, "EmployeeID", true));
-            this.SelectUserButton.Location = new System.Drawing.Point(191, 9);
-            this.SelectUserButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectUserButton.Location = new System.Drawing.Point(255, 11);
+            this.SelectUserButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SelectUserButton.Name = "SelectUserButton";
-            this.SelectUserButton.Size = new System.Drawing.Size(56, 19);
+            this.SelectUserButton.Size = new System.Drawing.Size(75, 23);
             this.SelectUserButton.TabIndex = 11;
             this.SelectUserButton.Text = "Select";
             this.SelectUserButton.UseVisualStyleBackColor = true;
+            this.SelectUserButton.Click += new System.EventHandler(this.SelectUserButton_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 145);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(12, 178);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 14;
             this.label5.Text = "Password";
             // 
             // SetEmailButton
             // 
-            this.SetEmailButton.Location = new System.Drawing.Point(191, 142);
-            this.SetEmailButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SetEmailButton.Location = new System.Drawing.Point(255, 175);
+            this.SetEmailButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SetEmailButton.Name = "SetEmailButton";
-            this.SetEmailButton.Size = new System.Drawing.Size(56, 19);
+            this.SetEmailButton.Size = new System.Drawing.Size(75, 23);
             this.SetEmailButton.TabIndex = 13;
             this.SetEmailButton.Text = "Change";
             this.SetEmailButton.UseVisualStyleBackColor = true;
@@ -196,21 +199,11 @@
             // 
             // SetEmailTextBox
             // 
-            this.SetEmailTextBox.Location = new System.Drawing.Point(99, 142);
-            this.SetEmailTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SetEmailTextBox.Location = new System.Drawing.Point(132, 175);
+            this.SetEmailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SetEmailTextBox.Name = "SetEmailTextBox";
-            this.SetEmailTextBox.Size = new System.Drawing.Size(76, 20);
+            this.SetEmailTextBox.Size = new System.Drawing.Size(100, 22);
             this.SetEmailTextBox.TabIndex = 12;
-            // 
-            // schedulingDatabaseDataSet1
-            // 
-            this.schedulingDatabaseDataSet1.DataSetName = "SchedulingDatabaseDataSet1";
-            this.schedulingDatabaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // employeeBindingSource
-            // 
-            this.employeeBindingSource.DataMember = "Employee";
-            this.employeeBindingSource.DataSource = this.schedulingDatabaseDataSet1;
             // 
             // employeeTableAdapter
             // 
@@ -218,9 +211,9 @@
             // 
             // EditUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 192);
+            this.ClientSize = new System.Drawing.Size(389, 236);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SetEmailButton);
             this.Controls.Add(this.SetEmailTextBox);
@@ -236,12 +229,12 @@
             this.Controls.Add(this.SetFirstNameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditUserForm";
             this.Text = "This will be the admin\'s name";
             this.Load += new System.EventHandler(this.EditUserForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.schedulingDatabaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulingDatabaseDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

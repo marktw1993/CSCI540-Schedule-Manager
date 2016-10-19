@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace ScheduleGenerator
 {
@@ -16,6 +17,7 @@ namespace ScheduleGenerator
     {
         SqlConnection con = new SqlConnection();
         String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+
         public Form1()
         {
             InitializeComponent();
@@ -30,13 +32,25 @@ namespace ScheduleGenerator
                 con.Open();
                 string userid = UsernameTextBox.Text;
                 string password = PasswordMaskedTextBox.Text;
-                SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
+
+                //SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
+                SqlCommand cmd = new SqlCommand("getPassword", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@pID", userid));
+
+
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    SqlCommand adminCheck = new SqlCommand("select * from Employee where Email='" + userid + "'and Admin='True'", con);
+                    //SqlCommand adminCheck = new SqlCommand("select * from Employee where Email='" + userid + "'and Admin='True'", con);
+                    //You might need to check the procedure as I'm not sure what you called the Admin column so it could cause errors.
+
+                    SqlCommand adminCheck = new SqlCommand("getAdmin", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@pID", userid));
+
                     SqlDataAdapter adminDA = new SqlDataAdapter(adminCheck);
                     DataTable adminDT = new DataTable();
                     adminDA.Fill(adminDT);
@@ -49,7 +63,7 @@ namespace ScheduleGenerator
                     else
                     {
                         MessageBox.Show("Login successful");
-                        new UserForm().Show();
+                        new UserForm(userid).Show();
                         this.Hide();
                     }
                 }
