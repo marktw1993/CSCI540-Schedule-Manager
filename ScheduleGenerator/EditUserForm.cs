@@ -40,28 +40,28 @@ namespace ScheduleGenerator
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@pID", currentID));
             //Store result. I don't know how as you seem to display the knowledge in the login form.
-            label1.Text = firstName;
+            //label1.Text = firstName;
 
             //Get last name.
             cmd = new SqlCommand("getLastName", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@pID", currentID));
             //Store result.
-            label2.Text = lastName;
+            //label2.Text = lastName;
 
             //Get email.
             cmd = new SqlCommand("getLastName", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@pID", currentID));
             //Store result.
-            label3.Text = email;
+            //label3.Text = email;
 
             //Get password.
             cmd = new SqlCommand("getLastName", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@pID", currentID));
             //Store result.
-            label5.Text = password;
+            //label5.Text = password;
 
 
             con.Close();
