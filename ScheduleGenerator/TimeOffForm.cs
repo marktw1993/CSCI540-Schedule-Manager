@@ -19,7 +19,8 @@ namespace ScheduleGenerator
 
         private void TimeOffForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            new UserForm().Show();
+            this.Close();
+            //new UserForm().Show();
         }
     }
 }

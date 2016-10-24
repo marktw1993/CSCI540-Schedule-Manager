@@ -20,9 +20,9 @@ namespace ScheduleGenerator
         private String currentUserId;
 
         //Must have a way to keep track of which user is using the form.
-        public UserForm(String id)
+        public UserForm(String email)
         {
-            currentUserId = id;
+            currentUserId = email;
             InitializeComponent();
         }
 
@@ -33,8 +33,8 @@ namespace ScheduleGenerator
 
         private void AvailabilityButton_Click(object sender, EventArgs e)
         {
-            //How will we create an availability ID?
-            String availableId = "null? Should this be sequential?";
+
+           
             SqlConnection con = new SqlConnection(serverInfo);
             con.Open();
 
@@ -43,7 +43,6 @@ namespace ScheduleGenerator
             String toTime = toSundayTextBox.ToString();
             SqlCommand cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", availableId));
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 0 for Sunday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 0));
@@ -55,7 +54,7 @@ namespace ScheduleGenerator
             toTime = toMondayTextBox.ToString();
             cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", availableId));
+
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 1 for Monday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 1));
@@ -67,7 +66,6 @@ namespace ScheduleGenerator
             toTime = toTuesdayTextBox.ToString();
             cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", availableId));
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 2 for Tuesday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 2));
@@ -79,7 +77,6 @@ namespace ScheduleGenerator
             toTime = toWednesdayTextBox.ToString();
             cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", availableId));
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 3 for Wednesday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 3));
@@ -91,7 +88,6 @@ namespace ScheduleGenerator
             toTime = toThursdayTextBox.ToString();
             cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", availableId));
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 4 for Thursday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 4));
@@ -103,7 +99,6 @@ namespace ScheduleGenerator
             toTime = toFridayTextBox.ToString();
             cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", availableId));
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 5 for Friday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 5));
@@ -115,7 +110,6 @@ namespace ScheduleGenerator
             toTime = toSaturdayTextBox.ToString();
             cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@pID", availableId));
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 6 for Saturday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 6));
