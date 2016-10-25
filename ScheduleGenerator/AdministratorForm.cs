@@ -39,7 +39,7 @@ namespace ScheduleGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new UserForm().Show();
+            new UserForm(0).Show();
             this.Hide();
         }
     }

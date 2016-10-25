@@ -16,7 +16,8 @@ namespace ScheduleGenerator
     public partial class Form1 : Form
     {
         SqlConnection con = new SqlConnection();
-        String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+       // String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=HEADQUARTERS\\SQLSERVEREXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
 
         public Form1()
         {
@@ -30,7 +31,7 @@ namespace ScheduleGenerator
             {
                 SqlConnection con = new SqlConnection(serverInfo);
                 con.Open();
-                string email = UsernameTextBox.Text;
+                int userID = Convert.ToInt32(UsernameTextBox.Text);
                 string password = PasswordMaskedTextBox.Text;
 
                 //SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
@@ -50,10 +51,6 @@ namespace ScheduleGenerator
                     getID.CommandType = CommandType.StoredProcedure;
                     getID.Parameters.Add(new SqlParameter("@Pemail", email));
                     SqlDataAdapter idDataAdapter = new SqlDataAdapter(getID);
-
-                    DataSet userDataSetID = new DataSet();
-                    idDataAdapter.Fill(userDataSetID, "EmployeeID");
-                    int userID = userDataSetID.;
 
                     SqlCommand adminCheck = new SqlCommand("getAdmin", con);
                     adminCheck.CommandType = CommandType.StoredProcedure;
