@@ -7,7 +7,7 @@ GO
 -- Create date: 10-16-16
 -- Description:	Set the employee's password with ID.
 -- =============================================
-CREATE PROCEDURE setLastName
+CREATE PROCEDURE setPassword
 	-- Add the parameters for the stored procedure here
 	@pID int = 0,
 	@pNewPassword varchar(50) = ''
