@@ -17,7 +17,7 @@ namespace ScheduleGenerator
     {
         SqlConnection con = new SqlConnection();
        // String serverInfo = "Data Source=MARK-PC\\MWSQLSERVER;Initial Catalog=SchedulingDatabase;Integrated Security=True";
-        String serverInfo = "Data Source=HEADQUARTERS\\SQLSERVEREXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
+        String serverInfo = "Data Source=HEADQUARTERS\\SQLEXPRESS;Initial Catalog=SchedulingDatabase;Integrated Security=True";
 
         public Form1()
         {
@@ -31,7 +31,10 @@ namespace ScheduleGenerator
             {
                 SqlConnection con = new SqlConnection(serverInfo);
                 con.Open();
-                int userID = Convert.ToInt32(UsernameTextBox.Text);
+                string userID = UsernameTextBox.Text;
+
+                int userIDint = Convert.ToInt32(userID);
+
                 string password = PasswordMaskedTextBox.Text;
 
                 //SqlCommand cmd = new SqlCommand("select Email,Password from Employee where Email='" + userid + "'and Password='" + password + "'", con);
@@ -53,8 +56,8 @@ namespace ScheduleGenerator
                     SqlDataAdapter idDataAdapter = new SqlDataAdapter(getID);
 
                     SqlCommand adminCheck = new SqlCommand("getAdmin", con);
-                    adminCheck.CommandType = CommandType.StoredProcedure;
                     adminCheck.Parameters.Add(new SqlParameter("@pID", userID));
+                    adminCheck.CommandType = CommandType.StoredProcedure;
                     SqlDataAdapter adminDA = new SqlDataAdapter(adminCheck);
                     DataTable adminDT = new DataTable();
 
@@ -70,7 +73,7 @@ namespace ScheduleGenerator
                     else
                     {
                         MessageBox.Show("Login successful");
-                        new UserForm(userID).Show();
+                        new UserForm(userIDint).Show();
                         this.Hide();
                     }
                 }
@@ -92,10 +95,10 @@ namespace ScheduleGenerator
             Close();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
+       // private void LoginForm_Load(object sender, EventArgs e)
+        //{
             // TODO: This line of code loads data into the 'email.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter1.Fill(this.email.Employee);
-        }
+          //  this.employeeTableAdapter1.Fill(this.email.Employee);
+        //}
     }
 }

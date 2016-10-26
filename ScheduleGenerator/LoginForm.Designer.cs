@@ -148,7 +148,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Product Name";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            //this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.email)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
