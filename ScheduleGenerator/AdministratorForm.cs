@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace ScheduleGenerator
 {
     public partial class AdministratorForm : Form
-    {
+    { 
         public AdministratorForm()
         {
             InitializeComponent();
@@ -39,7 +39,11 @@ namespace ScheduleGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             new UserForm(0).Show();
+=======
+            new UserForm(null).Show();
+>>>>>>> origin/master
             this.Hide();
         }
     }

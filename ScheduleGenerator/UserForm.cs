@@ -21,9 +21,13 @@ namespace ScheduleGenerator
         private int currentUserId;
 
         //Must have a way to keep track of which user is using the form.
+<<<<<<< HEAD
         public UserForm(int id)
+=======
+        public UserForm(String email)
+>>>>>>> origin/master
         {
-            currentUserId = id;
+            currentUserId = email;
             InitializeComponent();
         }
 
@@ -34,6 +38,11 @@ namespace ScheduleGenerator
 
         private void AvailabilityButton_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+
+           
+>>>>>>> origin/master
             SqlConnection con = new SqlConnection(serverInfo);
             con.Open();
 
@@ -53,6 +62,10 @@ namespace ScheduleGenerator
             toTime = toMondayTextBox.ToString();
             cmd = new SqlCommand("addAvailability", con);
             cmd.CommandType = CommandType.StoredProcedure;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
             cmd.Parameters.Add(new SqlParameter("@pNewEmployeeID", currentUserId));
             //Day id is 1 for Monday.
             cmd.Parameters.Add(new SqlParameter("@pDayID", 1));
